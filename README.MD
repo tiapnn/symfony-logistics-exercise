@@ -1,4 +1,4 @@
-#### PHP Test per MondoSpedizioni
+#### Symfony logistics exercise
 
 email: tiapnn@yahoo.it
 nome: Mattia Penna
