@@ -6,7 +6,6 @@ namespace Entities;
 
 class Courier
 {
-    // relazione one to many (collection)
     public ShipmentStatus $shipmentStatus;
 
     public function __construct(

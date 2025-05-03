@@ -9,18 +9,17 @@ use Entities\ShipmentStatus;
 class ShipmentStatusController
 {
 
-    public static function makeCourierRequest(ShipmentStatus $shipmentStatus)
+    public static function makeCourierRequest(ShipmentStatus $shipmentStatus): string
     {
 
       $trackingNumber = $shipmentStatus->getTrackingNumber();
-      // nome del parametro da mandare all api
       $trackingDenomination = $shipmentStatus->getCourier()?->getTrakingDenomination();
 
       /*
-        * Qui si esegue la richiesta all api e si aspetta la risposta.
-        * Per una performance migliore e scalabilità si dovrebbe gestire in modo asincrono (userei symfony messanger).
-        * Questa funzione si puo anche spezzare in due parti: creazione e invio
-        * Qui si puo includere logica di business.
+        * Here the request to the API is executed, and the response is awaited.
+        * For better performance and scalability, this should be handled asynchronously (e.g., using Symfony Messenger).
+        * This function could also be split into two parts: creation and sending.
+        * Business logic can be included here.
       */
 
       // Mock response

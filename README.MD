@@ -1,30 +1,30 @@
-#### Symfony logistics exercise
+#### Symfony Logistics Exercise
 
-email: tiapnn@yahoo.it
-nome: Mattia Penna
+**Contact:**
+*   Email: tiapnn@yahoo.it
+*   Name: Mattia Penna
 
-Requirements:
+**Requirements:**
 
-- Creare un endpoint per l’interrogazione dello stato di una spedizione di un corriere.
-- Il codice non deve necessariamente girare/funzionare.
-- Privilegiare la scrittura di proprie classi a discapito di un uso massivo di un framework.
+*   Create an API endpoint to query the status of a shipment handled by a courier.
+*   The code does not necessarily need to run or be functional.
+*   Prioritize writing custom classes over extensive use of framework features.
 
-Tempo a disposizione: 
+**Time Available:**
 
-- 2h 30'
+*   2 hours 30 minutes
 
-Soluzione:
+**Proposed Solution:**
 
-Nell'ottica di dover creare questo servio per davvero e con una buona scalabilità e manutenzione nel tempo, 
-metterei su un Symfony (latest version) con Api Platform e Easyadmin per gestire le varie entità dinamicamente e senza toccare il codice.
+To create a robust, scalable, and maintainable service, the ideal solution would involve using Symfony (latest stable version) along with API Platform and EasyAdmin. This setup would allow for dynamic management of entities and related APIs with minimal source code modification.
 
-Le entita principali sono:
-- ShipmentStatus
-Entità per descrivere la richiesta di informazioni sullo stato della spedizione.
+The main identified entities are:
 
-- Courier (one to many con ShipmentStatus)
-Entità per descrivere i vari corrieri con i quali si lavora.
+*   **`ShipmentStatus`**: Represents the request and response containing information about the status of a specific shipment.
+*   **`Courier`**: Represents the different partner couriers. There is a *one-to-many* relationship between `Courier` and `ShipmentStatus` (one courier handles many shipments).
 
-Dato che il tempo a disposizione è poco e il punto focale non è l'utilizzo del framework, ho scelto di fare un mockup fingendo che sia il framework scelto.
+Given the limited time and the focus on application logic rather than full framework integration, a *mockup* of the required endpoint has been implemented, simulating the described architecture.
 
-[Endpoint](api/v1/shipment-status/index.php) 👈🏼 Clicca qui per iniziare a vedere il codice.
+**Code:**
+
+*   [Endpoint Mockup](api/v1/shipment-status/index.php) 👈🏼 Click here to see the mockup implementation.

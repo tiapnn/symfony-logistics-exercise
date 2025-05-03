@@ -10,10 +10,9 @@ class ShipmentStatus
 
   public function __construct(
     public string $tracking_number,
-    // relazione many to one
     public Courier $courier,
 
-    // @TODO: aggiungere altre props utili (created_at, etc).
+    // @TODO: add other properties like status, delivery_date, etc.
   ) {
   }
 
