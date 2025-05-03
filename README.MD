@@ -1,9 +1,5 @@
 #### Symfony Logistics Exercise
 
-**Contact:**
-*   Email: tiapnn@yahoo.it
-*   Name: Mattia Penna
-
 **Requirements:**
 
 *   Create an API endpoint to query the status of a shipment handled by a courier.
