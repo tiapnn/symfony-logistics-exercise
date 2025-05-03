@@ -41,6 +41,6 @@ $shipmentStatus->setResponse($courierResponse);
 
 // Send the response as a JSON response.
 header('Content-Type: application/json');
-echo $courierResponse; // Use echo instead of die for cleaner output
-exit; // Use exit instead of die
+echo $courierResponse;
+exit;
 ?>
